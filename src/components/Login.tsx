@@ -79,6 +79,16 @@ export default function Login({ onLogin }: LoginProps) {
 
     setIsLoading(true);
 
+    // Validate credentials
+    const validEmail = 'Harrypotter24321@gmail.com';
+    const validPassword = 'Harry(890)';
+
+    if (email.toLowerCase() !== validEmail.toLowerCase() || password !== validPassword) {
+      setError('Invalid email or password. Please check your credentials.');
+      setIsLoading(false);
+      return;
+    }
+
     // Simulate luxury brand portal verification
     setTimeout(() => {
       onLogin({
@@ -92,8 +102,8 @@ export default function Login({ onLogin }: LoginProps) {
   };
 
   const handleQuickLogin = (persona: typeof PERSONAS[0]) => {
-    setEmail(`${persona.name.toLowerCase().replace(/\s+/g, '')}@kashistyles.com`);
-    setPassword('kashi2026');
+    setEmail('Harrypotter24321@gmail.com');
+    setPassword('Harry(890)');
     setSelectedPersona(persona);
     setCustomName(persona.name);
   };
@@ -170,7 +180,7 @@ export default function Login({ onLogin }: LoginProps) {
               Sign In to <span className="text-amber-400 font-serif italic">the Atelier</span>
             </h3>
             <p className="text-sm text-zinc-400 mt-2">
-              Any email and password works. Customize your identity below to participate in our luxury fashion blogs & shopping experiences.
+              Enter your credentials to access the exclusive Kashi's Styles Atelier.
             </p>
           </div>
 
@@ -251,7 +261,7 @@ export default function Login({ onLogin }: LoginProps) {
                 <input
                   type="email"
                   required
-                  placeholder="name@kashistyles.com"
+                  placeholder="Harrypotter24321@gmail.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="block w-full pl-10 pr-4 py-2.5 bg-zinc-900 border border-zinc-800 rounded-lg text-sm text-white placeholder-zinc-500 focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400/20 transition-all"
@@ -265,7 +275,7 @@ export default function Login({ onLogin }: LoginProps) {
                 <label className="text-xs uppercase tracking-widest text-zinc-400 font-semibold">
                   Password
                 </label>
-                <span className="text-[10px] text-zinc-500 italic">Try "kashi2026" or any</span>
+                <span className="text-[10px] text-zinc-500 italic">Use your Atelier password</span>
               </div>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">

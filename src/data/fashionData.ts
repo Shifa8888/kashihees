@@ -2,7 +2,7 @@ export interface Product {
   id: string;
   name: string;
   price: number;
-  category: 'Urban Streetwear' | 'Traditional Elegance' | 'Luxe Evening' | 'Casual Chic';
+  category: 'Urban Streetwear' | 'Traditional Elegance' | 'Luxe Evening' | 'Casual Chic' | 'Dresses' | 'Track Suits';
   image: string;
   description: string;
   sizes: string[];
@@ -140,6 +140,134 @@ export const PRODUCTS: Product[] = [
     inStock: false,
     rating: 4.8,
     reviewsCount: 39
+  },
+
+  // ── DRESSES ──────────────────────────────────────────────────────────────
+  {
+    id: 'prod-d1',
+    name: 'Noir Floral Midi Dress',
+    price: 98.00,
+    category: 'Dresses',
+    image: 'https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&q=80&w=800',
+    description: 'Elegant black midi dress with delicate floral embroidery along the hem. Features a flattering A-line silhouette, puff sleeves, and a concealed back zip.',
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    inStock: true,
+    rating: 4.8,
+    reviewsCount: 73,
+    featured: true
+  },
+  {
+    id: 'prod-d2',
+    name: 'Blush Ruffle Wrap Dress',
+    price: 85.00,
+    category: 'Dresses',
+    image: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&q=80&w=800',
+    description: 'Soft blush-pink chiffon wrap dress with cascading ruffle tiers. Adjustable tie waist and flutter sleeves make it perfect for garden parties and brunches.',
+    sizes: ['XS', 'S', 'M', 'L'],
+    inStock: true,
+    rating: 4.7,
+    reviewsCount: 58
+  },
+  {
+    id: 'prod-d3',
+    name: 'Cobalt Bodycon Evening Dress',
+    price: 130.00,
+    category: 'Dresses',
+    image: 'https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&q=80&w=800',
+    description: 'Striking cobalt blue stretch-crepe bodycon dress with a plunging V-neckline and thigh-high side slit. Designed for maximum impact at evening events.',
+    sizes: ['XS', 'S', 'M', 'L'],
+    inStock: true,
+    rating: 4.9,
+    reviewsCount: 44,
+    featured: true
+  },
+  {
+    id: 'prod-d4',
+    name: 'Ivory Lace Maxi Dress',
+    price: 155.00,
+    category: 'Dresses',
+    image: 'https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&q=80&w=800',
+    description: 'Romantic floor-length ivory lace maxi dress with scalloped edges, sheer long sleeves, and a subtle train. Ideal for weddings and formal occasions.',
+    sizes: ['S', 'M', 'L', 'XL'],
+    inStock: true,
+    rating: 5.0,
+    reviewsCount: 31
+  },
+  {
+    id: 'prod-d5',
+    name: 'Terracotta Shirt Dress',
+    price: 72.00,
+    category: 'Dresses',
+    image: 'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&q=80&w=800',
+    description: 'Relaxed terracotta linen-blend shirt dress with a belted waist, chest pockets, and rolled-up sleeves. Effortlessly chic for everyday wear.',
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    inStock: true,
+    rating: 4.6,
+    reviewsCount: 89
+  },
+
+  // ── TRACK SUITS ──────────────────────────────────────────────────────────
+  {
+    id: 'prod-t1',
+    name: 'Obsidian Velour Track Suit',
+    price: 145.00,
+    category: 'Track Suits',
+    image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=800',
+    description: 'Premium obsidian velour two-piece track suit with a zip-up hoodie and tapered jogger pants. Gold-tone hardware and embroidered logo detailing throughout.',
+    sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
+    inStock: true,
+    rating: 4.9,
+    reviewsCount: 112,
+    featured: true
+  },
+  {
+    id: 'prod-t2',
+    name: 'Sage Green Tech Track Suit',
+    price: 118.00,
+    category: 'Track Suits',
+    image: 'https://images.unsplash.com/photo-1556906781-9a412961a28c?auto=format&fit=crop&q=80&w=800',
+    description: 'Moisture-wicking sage green performance track suit with 4-way stretch fabric, reflective piping, and zippered ankle cuffs. Built for both gym and street.',
+    sizes: ['S', 'M', 'L', 'XL'],
+    inStock: true,
+    rating: 4.7,
+    reviewsCount: 67
+  },
+  {
+    id: 'prod-t3',
+    name: 'Ivory Ribbed Lounge Set',
+    price: 95.00,
+    category: 'Track Suits',
+    image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=80&w=800',
+    description: 'Ultra-soft ivory ribbed cotton lounge set featuring a cropped zip-up jacket and wide-leg joggers. Minimalist design with tonal stitching for a clean aesthetic.',
+    sizes: ['XS', 'S', 'M', 'L'],
+    inStock: true,
+    rating: 4.8,
+    reviewsCount: 54
+  },
+  {
+    id: 'prod-t4',
+    name: 'Midnight Navy Retro Track Suit',
+    price: 135.00,
+    category: 'Track Suits',
+    image: 'https://images.unsplash.com/photo-1571945153237-4929e783af4a?auto=format&fit=crop&q=80&w=800',
+    description: 'Retro-inspired midnight navy track suit with contrast white side stripes, snap-button jacket, and elasticated waist joggers. A nod to classic athletic heritage.',
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    inStock: true,
+    rating: 4.6,
+    reviewsCount: 38
+  },
+  {
+    id: 'prod-t5',
+    name: 'Burgundy Satin Track Suit',
+    price: 160.00,
+    category: 'Track Suits',
+    image: 'https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&q=80&w=800',
+    description: 'Luxurious burgundy satin track suit with a relaxed bomber-style jacket and straight-leg trousers. Silk-feel lining and contrast piping for an elevated look.',
+    sizes: ['XS', 'S', 'M', 'L'],
+    inStock: false,
+    rating: 4.9,
+    reviewsCount: 22,
+    featured: true
   }
 ];
 

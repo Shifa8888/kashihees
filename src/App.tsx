@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { 
   Sparkles, 
   BookOpen, 
@@ -124,7 +124,7 @@ export default function App() {
             return { ...post, likes: post.likes - 1 };
           } else {
             localStorage.setItem(`liked_${postId}`, 'true');
-            addNotification('💖 Liked article!');
+            addNotification('ðŸ’– Liked article!');
             return { ...post, likes: post.likes + 1 };
           }
         }
@@ -217,7 +217,7 @@ export default function App() {
       }
     });
 
-    addNotification(`👜 Added ${product.name} (Size: ${finalSize}) to your Cart!`);
+    addNotification(`ðŸ‘œ Added ${product.name} (Size: ${finalSize}) to your Cart!`);
   };
 
   const handleUpdateQuantity = (productId: string, size: string, change: number) => {
@@ -287,7 +287,7 @@ export default function App() {
               onClick={() => setToasts((prev) => prev.filter((t) => t.id !== toast.id))}
               className="text-zinc-400 hover:text-white text-xs font-extrabold focus:outline-none"
             >
-              ✕
+              âœ•
             </button>
           </div>
         ))}
@@ -432,7 +432,7 @@ export default function App() {
                   activeTab === 'blog' ? 'bg-amber-400 text-black border-amber-400' : 'bg-transparent text-white border-zinc-800'
                 }`}
               >
-                📖 Blog Feed
+                ðŸ“– Blog Feed
               </button>
               <button
                 onClick={() => { setActiveTab('shop'); setIsMobileMenuOpen(false); }}
@@ -440,7 +440,7 @@ export default function App() {
                   activeTab === 'shop' ? 'bg-amber-400 text-black border-amber-400' : 'bg-transparent text-white border-zinc-800'
                 }`}
               >
-                🛍️ Boutique Shop
+                ðŸ›ï¸ Boutique Shop
               </button>
             </div>
 
@@ -510,7 +510,7 @@ export default function App() {
               Currently Browsing:
             </h3>
             <span className="text-xl font-bold text-white flex items-center gap-2">
-              {activeTab === 'blog' ? '📖 The Editorial Feed' : '🛍️ The Curated Boutique'}
+              {activeTab === 'blog' ? 'ðŸ“– The Editorial Feed' : 'ðŸ›ï¸ The Curated Boutique'}
               <span className="text-xs font-normal text-amber-400 bg-amber-400/5 border border-amber-400/10 px-2 py-0.5 rounded-full">
                 {activeTab === 'blog' ? filteredPosts.length : filteredProducts.length} Items Available
               </span>
@@ -609,7 +609,7 @@ export default function App() {
                           <Calendar className="h-3 w-3" />
                           <span>{post.date}</span>
                         </span>
-                        <span>•</span>
+                        <span>â€¢</span>
                         <span className="flex items-center space-x-1">
                           <Clock className="h-3 w-3" />
                           <span>{post.readTime}</span>
@@ -1221,7 +1221,7 @@ export default function App() {
 
           {/* Bottom Bar */}
           <div className="border-t border-zinc-900 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p className="text-zinc-600 text-[10px]">© 2026 Kashi's Styles Atelier. All premium rights reserved.</p>
+            <p className="text-zinc-600 text-[10px]">Â© 2026 Kashi's Styles Atelier. All premium rights reserved.</p>
             <div className="flex items-center gap-4 text-[10px]">
               <a href="#privacy" className="hover:text-amber-400 transition-colors">Privacy</a>
               <a href="#terms" className="hover:text-amber-400 transition-colors">Terms</a>
@@ -1232,60 +1232,6 @@ export default function App() {
           </div>
 
         </div>
-      </footer>
-          <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="h-8 w-8 rounded-full bg-gradient-to-tr from-amber-500 to-amber-300 flex items-center justify-center">
-                <Sparkles className="h-4 w-4 text-black" />
-              </div>
-              <span className="text-sm font-bold tracking-widest text-amber-400 font-serif">KASHI'S STYLES</span>
-            </div>
-            <p className="leading-relaxed text-zinc-400">
-              Crafting a beautiful bridge between streetwear utility and classic South Asian silk craft since 2026.
-            </p>
-          </div>
-
-          <div>
-            <h5 className="font-bold uppercase tracking-wider text-white mb-3">Shop Curations</h5>
-            <ul className="space-y-2">
-              <li><button onClick={() => { setActiveTab('shop'); setShopCategory('Urban Streetwear'); }} className="hover:text-amber-400 transition-colors">Urban Streetwear</button></li>
-              <li><button onClick={() => { setActiveTab('shop'); setShopCategory('Traditional Elegance'); }} className="hover:text-amber-400 transition-colors">Traditional Elegance</button></li>
-              <li><button onClick={() => { setActiveTab('shop'); setShopCategory('Luxe Evening'); }} className="hover:text-amber-400 transition-colors">Luxe Evening</button></li>
-              <li><button onClick={() => { setActiveTab('shop'); setShopCategory('Casual Chic'); }} className="hover:text-amber-400 transition-colors">Casual Chic</button></li>
-            </ul>
-          </div>
-
-          <div>
-            <h5 className="font-bold uppercase tracking-wider text-white mb-3">Atelier Editorial</h5>
-            <ul className="space-y-2">
-              <li><button onClick={() => { setActiveTab('blog'); setBlogCategory('Styling Tips'); }} className="hover:text-amber-400 transition-colors">Styling Tips</button></li>
-              <li><button onClick={() => { setActiveTab('blog'); setBlogCategory('Trends'); }} className="hover:text-amber-400 transition-colors">Trends</button></li>
-              <li><button onClick={() => { setActiveTab('blog'); setBlogCategory('Collection Launches'); }} className="hover:text-amber-400 transition-colors">Collection Launches</button></li>
-              <li><button onClick={() => { setActiveTab('blog'); setBlogCategory('Behind The Scenes'); }} className="hover:text-amber-400 transition-colors">Behind The Scenes</button></li>
-            </ul>
-          </div>
-
-          <div className="space-y-3">
-            <h5 className="font-bold uppercase tracking-wider text-white">Join the Newsletter</h5>
-            <p className="text-zinc-400 leading-relaxed">Get 10% off your next handmade couture purchase.</p>
-            <form onSubmit={(e) => { e.preventDefault(); addNotification('✨ Thank you for subscribing to Kashi’s newsletter!'); }} className="flex space-x-1">
-              <input 
-                type="email" 
-                required
-                placeholder="your.email@domain.com"
-                className="px-3 py-2 bg-zinc-900 border border-zinc-800 rounded-lg text-xs w-full text-white placeholder-zinc-500 focus:outline-none focus:border-amber-400"
-              />
-              <button 
-                type="submit"
-                className="px-3 bg-amber-400 text-black rounded-lg text-xs font-bold uppercase hover:bg-amber-300 transition-colors"
-              >
-                Join
-              </button>
-            </form>
-          </div>
-
-        </div>
-
       </footer>
 
     </div>
